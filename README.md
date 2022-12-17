@@ -1,24 +1,18 @@
-# README
+# Confetti Setup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Initial installation:
+`rails new confetti_test -j esbuild -c tailwind -d postgresql`
 
-Things you may want to cover:
+Database setup:
+`rails db:create`
 
-* Ruby version
+Create static pages controller:
+`rails g controller Pages index`
 
-* System dependencies
+Update `config/routes.rb` to direct root path to `Pages` controller.
 
-* Configuration
+Install [Stimulus confetti](https://github.com/avo-hq/stimulus-confetti) and follow instructions:
+`yarn add stimulus-confetti`
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run server:
+`bin/dev`
