@@ -1,6 +1,12 @@
 <div class="container mx-auto mt-24 text-center">
   <h1 class="font-semibold">Test Confetti</h1>
   <div>
-    <%= link_to "Fire confetti", "#", class: "text-blue-500 hover:blue-700 hover:underline" %>
-  </div>
+    <%= link_to "Fire confetti", 
+                "#", 
+                data: {
+                  controller: "confetti",
+                  action: "click->confetti#spray"
+                },
+                class: "text-blue-500 hover:blue-700 hover:underline" %>
+  </div>  
 </div>
